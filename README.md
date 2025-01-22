@@ -1,4 +1,4 @@
-# PITP-Java-Core
+# PITP-Core-Java
 ---
 # 1. Java Introduction:
 
@@ -66,3 +66,40 @@ This example uses a multi-line comment (a comment block) to explain the code:
 to the screen, and it is amazing */
 System.out.println("Hello World");
 ```
+
+# 4. Java Variables
+Variables are containers for storing data values.
+In Java, there are different types of variables, for example:
+- #String - stores text, such as "Hello". String values are surrounded by double quotes
+- #int - stores integers (whole numbers), without decimals, such as 123 or -123
+- #float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+- #char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+- #boolean - stores values with two states: true or false
+
+##Declaring (Creating) Variables
+To create a variable, you must specify the type and assign it a value:
+```main.java
+type variableName = value;
+```
+
+To create a variable that should store text, look at the following example:
+```main.java
+String name = "Urooj";
+System.out.println(name);
+```
+
+other types
+```main.java
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
+```
+---
+
+# Java Data Types
+ Data types are divided into two groups:
+- Primitive data types - includes byte, short, int, long, float, double, boolean and char
+-Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)
+---
