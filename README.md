@@ -98,8 +98,163 @@ String myText = "Hello";
 ```
 ---
 
-# Java Data Types
+# 5. Java Data Types
  Data types are divided into two groups:
 - Primitive data types - includes byte, short, int, long, float, double, boolean and char
 -Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)
+---
+
+# 6. Java Operators
+Java provides various operators to perform operations on variables and values.
+
+- Arithmetic Operators: +, -, *, /, %
+- Relational Operators: ==, !=, <, >, <=, >=
+- Logical Operators: &&, ||, !
+- Assignment Operators: =, +=, -=, *=, /=, %=
+
+```main.java
+int a = 10, b = 5;
+System.out.println("Addition: " + (a + b)); // Output: 15
+System.out.println("Comparison: " + (a > b)); // Output: true
+```
+---
+
+# 7. Java Strings
+Strings in Java are objects that represent a sequence of characters.
+
+- Common methods: length(), charAt(), substring(), equals(), toUpperCase(), toLowerCase()
+
+```main.java
+String str = "Hello, World!";
+System.out.println("Length: " + str.length()); // Output: 13
+System.out.println("Uppercase: " + str.toUpperCase()); // Output: HELLO, WORLD!
+```
+---
+
+# 8. Java If-Else
+The if-else statement allows conditional execution of code.
+
+```Syntax:
+if (condition) {
+    // Code to execute if condition is true
+} else {
+    // Code to execute if condition is false
+}
+```
+
+```main.java
+int num = 10;
+if (num % 2 == 0) {
+    System.out.println("Even number");
+} else {
+    System.out.println("Odd number");
+}
+```
+---
+
+---
+
+# 9. Switch Statement
+The switch statement allows a variable to be tested for equality against multiple values.
+
+```Syntax:
+switch (variable) {
+    case value1:
+        // Code for case 1
+        break;
+    case value2:
+        // Code for case 2
+        break;
+    default:
+        // Code if no cases match
+}
+
+```
+
+```main.java
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+
+```
+---
+
+# 9. Loops in Java
+Loops allow you to execute a block of code repeatedly.
+
+- For Loop: Used when the number of iterations is known.
+```main.java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+- While Loop: Used when the number of iterations is not known.
+```main.java
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+
+```
+
+- Do-While Loop: Executes at least once, even if the condition is false.
+```main.java
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
+```
+---
+
+# 10. Java Methods
+Methods in Java are blocks of code designed to perform specific tasks. They enhance code reusability and modularity.
+
+## Types of Methods
+1. Predefined Methods: Built-in methods provided by Java (e.g., ```System.out.println()```, ```Math.sqrt()```).
+2. User-Defined Methods: Custom methods created by the programmer.
+```Syntax:
+returnType methodName(parameters) {
+    // Code to execute
+    return value; // Optional for void methods
+}
+```
+
+```main.java
+public class MethodsExample {
+    // Method to add two numbers
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int result = addNumbers(5, 10);
+        System.out.println("The sum is: " + result);
+    }
+}
+
+```
+## Key Points
+-Parameters: Methods can take input parameters to perform operations.
+-Return Type: Specifies the type of value the method will return (int, String, void, etc.).
+-Method Overloading: Multiple methods with the same name but different parameters.
+
+``` main.java
+public int multiply(int a, int b) { return a * b; }
+public double multiply(double a, double b) { return a * b; }
+
+```
 ---
