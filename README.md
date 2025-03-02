@@ -252,9 +252,129 @@ public class MethodsExample {
 -Return Type: Specifies the type of value the method will return (int, String, void, etc.).
 -Method Overloading: Multiple methods with the same name but different parameters.
 
+
+
+
 ``` main.java
 public int multiply(int a, int b) { return a * b; }
 public double multiply(double a, double b) { return a * b; }
 
 ```
 ---
+
+# JAVA OOPS
+---
+
+## 1️. Abstraction
+### Definition: Hiding implementation details and showing only the essential features of an object.
+
+### Real-World Scenario: Banking System (ATM Machine)
+  When you use an ATM, you only interact with the screen options like withdrawing money, checking balance, etc.
+
+- You don’t see how the ATM connects to the bank server, how data is verified, how logs are maintained, etc.
+- All the complex internal logic is abstracted away.
+
+Java Example:
+
+```
+abstract class BankAccount {
+    abstract void deposit(double amount);
+    abstract void withdraw(double amount);
+}
+class SavingsAccount extends BankAccount {
+    @Override
+    void deposit(double amount) {
+        // Logic for deposit
+    }
+    @Override
+    void withdraw(double amount) {
+        // Logic for withdrawal
+    }
+}
+```
+
+# 2. Encapsulation
+## Definition: Wrapping data (fields) and methods into a single unit (class) and controlling access using access modifiers (private, public).
+
+## Real-World Scenario: Medical Records
+A patient's medical records are private, and only authorized personnel (doctors, admin) can view or update them.
+- Data is protected.
+- External systems can only interact via public methods like getPatientInfo().
+
+### Java Example:
+```
+class Patient {
+    private String name;
+    private int age;
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+}
+```
+
+# 3️. Inheritance
+## Definition: A child class inherits the properties and behavior (methods) of a parent class.
+
+## Real-World Scenario: Vehicle Types
+A Car, Bike, and Truck are all types of Vehicle.
+- They all share common properties (speed, capacity).
+- They can have their own special features.
+
+### Java Example:
+
+```
+class Vehicle {
+    int speed;
+    int capacity;
+
+    void start() {
+        System.out.println("Vehicle is starting");
+    }
+}
+
+class Car extends Vehicle {
+    void openSunroof() {
+        System.out.println("Sunroof opened");
+    }
+}
+```
+
+# 4. Polymorphism
+## Definition: The ability to present the same method in different forms.
+
+## Real-World Scenario: Payment Processing System
+A payment system can process payments via Credit Card, PayPal, or Bitcoin, but the user just calls processPayment().
+
+The actual implementation varies based on the payment method.
+### Java Example:
+```
+class PaymentProcessor {
+    void processPayment() {
+        System.out.println("Processing generic payment");
+    }
+}
+
+class CreditCardPayment extends PaymentProcessor {
+    @Override
+    void processPayment() {
+        System.out.println("Processing credit card payment");
+    }
+}
+
+class PayPalPayment extends PaymentProcessor {
+    @Override
+    void processPayment() {
+        System.out.println("Processing PayPal payment");
+    }
+}
+```
+
+### Usage:
+```
+PaymentProcessor payment = new CreditCardPayment();
+payment.processPayment();  // "Processing credit card payment"
+```
+
